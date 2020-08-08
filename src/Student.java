@@ -24,6 +24,9 @@ public class Student {
     //методы
     public void question() {
         System.out.println("сколько тебе лет");
+        Scanner a = new Scanner(System.in);
+
+                System.out.println("мне " + a.nextLine() + " лет");
     }
 
     public void speak() {
@@ -32,10 +35,11 @@ public class Student {
 
     public void offset() {
         Scanner scan = new Scanner(System.in);
-        if (scan.nextLine() == "yes") {
-            System.out.print("зачет");
+        String answer = scan.nextLine();
+        if (answer.equals("yes")) {
+            System.out.println("зачет");
         }
-            else{
+        else{
             System.out.print("не зачет");
         }
     }
